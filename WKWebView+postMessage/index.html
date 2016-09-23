@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=360, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<style>
+			body	{font-family:sans-serif; font-size:20px;}
+		</style>
+	</head>
+	<body>
+		<div>
+			Pressing the button below will open a native <strong>UIActionSheet</strong>.
+
+			<button>Open an action sheet!</button>
+		</div>
+
+		<script>
+				document.getElementsByTagName('button')[0].addEventListener('click', () => {
+					if (window.webkit && window.webkit.messageHandlers) {
+						webkit.messageHandlers.actionSheet.postMessage({
+							title: 'WKWebView is...?',
+							options: [
+								'Awesome!',
+								'Cool!',
+								'Bitching!'
+							]
+						})
+					}
+				})
+		</script>
+	</body>
+</html>

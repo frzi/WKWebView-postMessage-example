@@ -15,18 +15,18 @@
 		</div>
 
 		<script>
-				document.getElementsByTagName('button')[0].addEventListener('click', () => {
-					if (window.webkit && window.webkit.messageHandlers) {
-						webkit.messageHandlers.actionSheet.postMessage({
-							title: 'WKWebView is...?',
-							options: [
-								'Awesome!',
-								'Cool!',
-								'Bitching!'
-							]
-						})
-					}
-				})
+			document.getElementsByTagName('button')[0].addEventListener('click', () => {
+				if (window.webkit && window.webkit.messageHandlers) {
+					webkit.messageHandlers.actionSheet.postMessage({
+						title: 'WKWebView is...?',
+						options: [
+							'Awesome!',
+							'Cool!',
+							'Bitching!'
+						]
+					})
+				}
+			})
 		</script>
 	</body>
 </html>

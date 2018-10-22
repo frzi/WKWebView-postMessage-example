@@ -19,7 +19,7 @@ final class ViewController: UIViewController {
         // Create script message handlers.
         let contentController = WKUserContentController()
         
-        // This will inject an `actionSheet` messageHanlder into the Javascript. Calling it will show a native
+        // This will inject an `actionSheet` messageHandler into the Javascript. Calling it will show a native
         // actionsheet, with Strings parsed by the Javascript.
         contentController.add(WKFormMessageHandler { message in
             // Get the Javascript parsed parameters.
